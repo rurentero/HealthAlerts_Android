@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tokenTittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:text="MQTT Connection"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/mqttState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="8dp"
+        android:layout_weight="1"
+        android:text="Not Connected"
+        android:textIsSelectable="true"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/notificationTittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:text="Notifications"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20sp" />
+
+    <ListView
+        android:id="@+id/list_notification"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_weight="4"
+        android:listSelector="@android:color/transparent" />
+
+    <TextView
+        android:id="@+id/ClientView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="8dp"
+        android:layout_weight="4"
+        android:text="Client Log"
+        android:textIsSelectable="true"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Get User" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Get Temperature" />
+</LinearLayout>
