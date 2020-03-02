@@ -119,6 +119,29 @@ public class MainActivity extends Activity {
             }
         });
 
+        Button button3 = (Button) findViewById(R.id.button3);
+        button3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Do something in response to button click
+                Toast toast = Toast.makeText(getApplicationContext(), "Solicitando temperatura corporal", Toast.LENGTH_SHORT);
+                toast.show();
+
+                String msg = "{\n" +
+                        "\t\"resource\": \"Status\",\n" +
+                        "\t\"method\": \"getBodyTemperature\",\n" +
+                        "\t\"sender\": \"11\",\n" +
+                        "\t\"params\": {\t}\n" +
+                        "}";
+                try {
+                    mqttClient.publishMessage(mqttClient.getMqttAndroidClientInstance(), msg, 1, "HealthAlerts");
+                } catch (MqttException e) {
+                    e.printStackTrace();
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
         // TODO End of Client Zone
 
     }

@@ -24,7 +24,7 @@ public class MqttClient {
      private static final String TAG = "MqttClient";
     private MqttAndroidClient mqttAndroidClient;
 
-    // TODO ?
+    // TODO Obtain the client instance.
     public MqttAndroidClient getMqttAndroidClientInstance() {
         return mqttAndroidClient;
     }

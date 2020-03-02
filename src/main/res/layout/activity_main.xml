@@ -43,14 +43,14 @@
     <ListView
         android:id="@+id/list_notification"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="300dp"
         android:layout_weight="4"
         android:listSelector="@android:color/transparent" />
 
     <TextView
         android:id="@+id/ClientView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:layout_gravity="center_horizontal"
         android:layout_margin="8dp"
         android:layout_weight="4"
@@ -71,4 +71,10 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Get Temperature" />
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Get Body Temperature" />
 </LinearLayout>
