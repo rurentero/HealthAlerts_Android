@@ -9,7 +9,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import android.util.Log;
 import android.view.View;
@@ -19,7 +18,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import org.eclipse.paho.android.service.MqttAndroidClient;
-import org.eclipse.paho.android.service.MqttService;
 import org.eclipse.paho.client.mqttv3.MqttException;
 import org.openapitools.server.database.NotificationClass;
 import org.openapitools.server.database.NotificationDatabase;

@@ -13,40 +13,16 @@
 package org.openapitools.server.resource;
 
 
-import org.openapitools.server.R;
-import org.openapitools.server.model.*;
-import org.openapitools.server.response.*;
-
-import java.util.*;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-
-import org.openapitools.server.model.Event;
-
-
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.TimeoutException;
-
-import android.app.AlertDialog;
 import android.content.Context;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.Volley;
-
 import android.content.Intent;
 import android.net.Uri;
-import android.util.Log;
 import android.widget.Toast;
+
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.Volley;
+
+import org.openapitools.server.model.Event;
+import org.openapitools.server.response.EventResponse;
 
 
 public class EventResource {
@@ -72,7 +48,6 @@ public class EventResource {
             break;
       }
 
-
   }
 
   /**
@@ -88,12 +63,6 @@ public class EventResource {
       // Toast for notification
       Toast toast = Toast.makeText(context, "Alert!: "+event.getTitle()+" - "+event.getDescription(), Toast.LENGTH_LONG);
       toast.show();
-
-      try {
-          Thread.sleep(3000);
-      } catch (InterruptedException e) {
-          e.printStackTrace();
-      }
 
       // Creates an Intent that will load a map with a mocked location
       Double lat = event.getLocation().getLatitude();
